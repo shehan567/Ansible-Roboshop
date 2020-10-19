@@ -1,0 +1,6 @@
+- name: Roboshop Modules
+  hosts: all
+  become: yes
+  roles:
+    - frontend
+    -

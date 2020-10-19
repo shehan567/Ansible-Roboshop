@@ -1,0 +1,11 @@
+- name: Install Nginx
+  yum:
+   name: nginx
+   state: latest
+
+- name: Start Nginx Service
+  systemd:
+    name: nginx
+    state: started
+    enabled: yes
+
