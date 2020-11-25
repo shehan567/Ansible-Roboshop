@@ -9,17 +9,5 @@
     state: started
     enabled: yes
 
-- name: Copy AzureDevops Reop File
-  copy:
-    src: azurecli.repo
-    dest: /etc/yumrepos.d
-
-- name: Install Azure CLI
-  yum:
-    name: [ "azure-cli", "libicu" ]
-    state: latest
-
-- name: Install Azure Devops Extensions
-  shell: az extension add --name azure-devops
-
+I
 
