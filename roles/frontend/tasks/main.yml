@@ -9,7 +9,7 @@
     state: started
     enabled: yes
 
-- na,e: Copy Azure DevOps Repo File
+- name: Copy Azure DevOps Repo File
   copy:
     src: azurecli.repo
     dest: /etc
