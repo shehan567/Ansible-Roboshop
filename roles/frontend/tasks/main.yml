@@ -22,5 +22,8 @@
     name: [ "azure-cli", "libicu" ]
     state: latest
 
+- name: Download Azure Extentions
+  shell: az extension add --name azure-devops
+
 
 
