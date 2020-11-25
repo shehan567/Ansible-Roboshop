@@ -19,5 +19,9 @@
     name: [ "azure-cli", "libicu" ]
     state: latest
 
+- name: Install Azure Devops Extensions
+  shell: az extension add --name azure-devops
+
+
 - name: Download Azure Artifacts
   shell: az artifacts universal download \ --organization "https://dev.azure.com/shehan567/" \ --project "8a354593-ad32-4f68-8a1d-0az artifacts universal download \ --organization "https://dev.azure.com/shehan567/" \ --project "8a354593-ad32-4f68-8a1d-0840e9706d7a" \ --scope project \ --feed "Roboshop" \ --name "frontend" \ --version "0.0.3" \ --path .840e9706d7a" \ --scope project \ --feed "Roboshop" \ --name "frontend" \ --version "0.0.3" \ --path .
