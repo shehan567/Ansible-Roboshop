@@ -1,4 +1,4 @@
-sudo sh -c 'echo -e "[azure-cli]
+sh -c 'echo -e "[azure-cli]
 name=Azure CLI
 baseurl=https://packages.microsoft.com/yumrepos/azure-cli
 enabled=1
