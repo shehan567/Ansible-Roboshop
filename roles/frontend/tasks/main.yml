@@ -9,9 +9,6 @@
     state: started
     enabled: yes
 
-- name: Download RPM
-  shell: rpm --import https://packages.microsoft.com/keys/microsoft.asc
-
 - name: Copy Azure DevOps Repo File
   copy:
     src: azure-cli.repo
