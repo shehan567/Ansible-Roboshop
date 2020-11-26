@@ -11,12 +11,12 @@
 
 - name: Remove old HTDocs
   file:
-    path: {{ARTIFACT_PATH}}
+    path: {{ ARTIFACT_PATH }}
     state: absent
 
 - name: Creat HtDocs Directory
   file:
-    path: {{ARTIFACT_PATH}}
+    path: {{ ARTIFACT_PATH }}
     state: directory
 
 - name: Include Artifacts Download setup
