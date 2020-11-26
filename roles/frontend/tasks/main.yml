@@ -3,11 +3,11 @@
     name: nginx
     state: latest
 
-- name: Start Nginx Service
-  systemd:
-    name: nginx
-    state: started
-    enabled: yes
+- name: Include AZ ClI Installation
+  include_role:
+    name: common
+    tasks_from: az-cli-setup
+
 
 - name: Remove old HTDocs
   file:
@@ -18,4 +18,16 @@
   file:
     path: {{ARTIFACT_PATH}}
     state: directory
+
+- name: Include Artifacts Download setup
+  include_role:
+    name: common
+    tasks_from: artifacts-download
+
+- name: Start Nginx Service
+  systemd:
+    name: nginx
+    state: started
+    enabled: yes
+
 
