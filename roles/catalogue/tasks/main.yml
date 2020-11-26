@@ -7,3 +7,23 @@
   user:
     name: roboshop
 
+- name: Include AZ ClI Installation
+  include_role:
+    name: common
+    tasks_from: az-cli-setup
+
+
+- name: Remove old HTDocs
+  file:
+    path: {{ARTIFACT_PATH}}
+    state: absent
+
+- name: Creat HtDocs Directory
+  file:
+    path: {{ARTIFACT_PATH}}
+    state: directory
+
+- name: Include Artifacts Download setup
+  include_role:
+    name: common
+    tasks_from: artifacts-download
