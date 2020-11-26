@@ -11,11 +11,11 @@
 
 - name: Remove old HTDocs
   file:
-    path: /usr/share/nginx/html
+    path: {{ARTIFACT_PATH}}
     state: absent
 
 - name: Creat HtDocs Directory
   file:
-    path: /usr/share/nginx/html
+    path: {{ARTIFACT_PATH}}
     state: directory
 
